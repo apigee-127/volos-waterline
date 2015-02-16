@@ -1,0 +1,39 @@
+{
+  "name": "volos-waterline",
+  "version": "0.0.0",
+  "description": "Volos connector for Waterline.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js"
+  },
+  "keywords": [
+    "volos",
+    "waterline"
+  ],
+  "author": {
+    "name": "Jeremy Whitlock",
+    "email": "jwhitlock@apache.org",
+    "url": "https://github.com/whitlockjc"
+  },
+  "bugs": {
+    "url": "https://github.com/apigee-127/volos-waterline/issues"
+  },
+  "homepage": "https://github.com/apigee-127/volos-waterline",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/apigee-127/volos-waterline.git"
+  },
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-istanbul": "^0.6.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.0"
+  }
+}
