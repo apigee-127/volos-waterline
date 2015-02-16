@@ -24,10 +24,17 @@
 
 'use strict';
 
+var del = require('del');
 var gulp = require('gulp');
 var istanbul = require('gulp-istanbul');
 var jshint = require('gulp-jshint');
 var mocha = require('gulp-mocha');
+
+gulp.task('clean', function (done) {
+  del([
+    'coverage'
+  ], done);
+});
 
 gulp.task('lint', function () {
   return gulp.src([

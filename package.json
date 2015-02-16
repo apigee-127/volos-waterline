@@ -30,6 +30,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-istanbul": "^0.6.0",
     "gulp-jshint": "^1.9.2",
