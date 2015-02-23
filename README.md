@@ -1,5 +1,4 @@
-volos-waterline is a Volos connector that uses Swagger and Waterline to very quickly expose a REST API on top of any
-Waterline adapter.
+volos-waterline is a Volos connector for wiring up Waterline.
 
 ## Project Badges
 
@@ -17,8 +16,4 @@ This project uses [Gulp][gulp] for building so `npm install -g gulp` once you cl
 project root will lint check the source code and run the unit tests.
 
 [gulp]: http://gulpjs.com/
-[json-schema]: http://json-schema.org/
 [npm]: https://www.npmjs.org/
-[project-issues]: https://github.com/apigee/volos-waterline/issues
-[release-notes]: https://github.com/apigee-127/volos-waterline/blob/master/RELEASE_NOTES.md
-[swagger]: http://swagger.io
