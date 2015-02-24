@@ -1,6 +1,6 @@
 {
   "name": "volos-waterline",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Volos connector for Waterline.",
   "main": "index.js",
   "scripts": {
