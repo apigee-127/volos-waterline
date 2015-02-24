@@ -29,13 +29,17 @@
     "index.js",
     "LICENSE"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "waterline": "^0.10.18"
+  },
   "devDependencies": {
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-istanbul": "^0.6.0",
     "gulp-jshint": "^1.9.2",
     "gulp-mocha": "^2.0.0",
-    "jshint-stylish": "^1.0.0"
+    "jshint-stylish": "^1.0.0",
+    "sails-disk": "^0.10.7",
+    "should": "^5.0.1"
   }
 }

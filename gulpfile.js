@@ -32,7 +32,8 @@ var mocha = require('gulp-mocha');
 
 gulp.task('clean', function (done) {
   del([
-    'coverage'
+    'coverage',
+    '.tmp'
   ], done);
 });
 
