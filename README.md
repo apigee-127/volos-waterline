@@ -1,4 +1,4 @@
-volos-waterline is a Volos connector for wiring up Waterline.
+volos-waterline is a Volos connector for using [Waterline](https://github.com/balderdashy/waterline).
 
 ## Project Badges
 
@@ -12,6 +12,67 @@ volos-waterline is a Volos connector for wiring up Waterline.
 ## Installation
 
 volos-waterline is distributed via [NPM][npm] so installation is the usual: `npm install volos-waterline --save`.
+
+## Usage
+
+Right now volos-waterline is a very lightweight wrapper around Waterline so the only method available is
+`initialize(config, callback)`.  Here is ane example usage:
+
+```js
+var vw = require('volos-waterline');
+var Waterline = require('waterline');
+
+var config = {
+  adapters: {
+    localDisk: require('sails-disk')
+  },
+  collections: {
+    Users: Waterline.Collection.extend({
+      connection: 'localDisk',
+      identity: 'users',
+
+      attributes: {
+        email: {
+          type: 'email',
+          required: true,
+          maxLength: 128
+        },
+        firstName: {
+          columnName: 'first_name',
+          defaultsTo: 'Anonymous',
+          type: 'string',
+          maxLength: 64,
+          minLength: 2
+        },
+        lastName: {
+          columnName: 'last_name',
+          defaultsTo: 'User',
+          type: 'string',
+          maxLength: 64,
+          minLength: 2
+        },
+        username: {
+          type: 'string',
+          regex: /^[a-z0-9_-]{4,24}$/,
+          required: true,
+          unique: true
+        }
+      }
+    })
+  },
+  connections: {
+    localDisk: {
+      adapter: 'localDisk'
+    }
+  }
+};
+
+vw.initialize(config, function (err, details) {
+  if (err) throw err;
+
+  // Use your adapters, collections, connections and waterline
+});
+```
 
 ## Contributing
 
